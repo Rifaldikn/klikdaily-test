@@ -1,28 +1,41 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app app>
+    <v-app-bar app outlined hide-on-scroll>
+      <v-row align="center" justify="start">
+        <v-col cols="auto">
+          <v-img
+            contain
+            height="150"
+            width="100"
+            class="mx-5"
+            aspect-ratio="auto"
+            :src="require(`@/assets/Klikdaily_Logo.png`)"
+          ></v-img
+        ></v-col>
+        <v-col cols="auto">
+          <div class="title">Assesment Test</div>
+        </v-col>
+      </v-row>
+    </v-app-bar>
+
+    <v-main app>
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+
+  data: () => ({
+    //
+  }),
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  background-color: #fafafa;
 }
 </style>
